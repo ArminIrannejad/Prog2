@@ -49,10 +49,10 @@ def runner(n):
 	return f'function {n} has completed'
 	
 def main():
-	##MC_PI(1000)
-	#volume1 = math.pi/math.gamma(2)*0.25
-	#volume2 = math.pi**(11/2)/math.gamma(6.5)* 0.5**11
-	#print(f'Mitt svar: {MC_HS(100000,2)} facit:{volume1} Mitt svar: {MC_HS(100000,11)} facit: {volume2}')
+	MC_PI(1000)
+	volume1 = math.pi/math.gamma(2)*0.25
+	volume2 = math.pi**(11/2)/math.gamma(6.5)* 0.5**11
+	print(f'Mitt svar: {MC_HS(100000,2)} facit:{volume1} Mitt svar: {MC_HS(100000,11)} facit: {volume2}')
 
 	nn = 10000000
 	nd = 11
