@@ -20,19 +20,19 @@ def fib_numb(n):
 		
 def main():
 	start = pc()
-	fib_py(40)
+	print(fib_py(40))
 	end = pc()
 	print(f'Normal Python took {round(end-start, 2)} seconds')
 
 	start = pc()
-	fib_numb(40)
+	print(fib_numb(40))
 	end = pc()
 	print(f'Python but with numba took {round(end-start, 2)} seconds')
 
 	
-	f = Person(15)
+	f = Person(40)
 	start = pc()
-	f.Fib()
+	print(f.Fib())
 	end = pc()
 	print(f'Python called and compiled in C++ took {round(end-start,2)} seconds')				#47 gives negative number, guess it goes over some kind of maximum range for C++;
 
