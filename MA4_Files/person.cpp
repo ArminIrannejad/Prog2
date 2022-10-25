@@ -6,7 +6,7 @@ class Person{
 		Person(int);
 		int get();
 		void set(int);
-		int Fib();		//Hämtar privat Fib 
+		int Fib();		
 	private:
 		int age;
 		int Fib_pr(int);		
@@ -30,6 +30,9 @@ int Person::Fib_pr(int n){
 	return fib(n - 1) + fib(n - 2);
 }
 
+int Person:: Fib(){
+	return Fib_pr(age);
+}
 extern "C"{
 	Person* Person_new(int n) {return new Person(n);}
 	int Person_get(Person* person) {return person->get();}
