@@ -34,7 +34,7 @@ def main():
 	start = pc()
 	f.Fib()
 	end = pc()
-	print(f'Python called and compiled in C++ took {round(end-start,2)} seconds')
+	print(f'Python called and compiled in C++ took {round(end-start,2)} seconds')				#47 gives negative number, guess it goes over some kind of maximum range for C++;
 
 	
 	
