@@ -24,7 +24,7 @@ def main():
 	numby = []
 	cppy = []
 
-	"""for i in x:
+	for i in x:
 
 		start = pc()
 		fib_py(i)
@@ -32,13 +32,15 @@ def main():
 		time = round(end-start, 3)
 		pyy.append(time)
 		print(f'Normal Python took {round(end-start, 2)} seconds')
+
+
 	for i in x:
 		start = pc()
 		fib_numb(i)
 		end = pc()
 		time = round(end-start, 3)
 		numby.append(time)
-		print(f'Python but with numba took {round(end-start, 2)} seconds')"""
+		print(f'Python but with numba took {round(end-start, 2)} seconds')
 	for i in x:
 
 		f = Person(i)
@@ -47,14 +49,19 @@ def main():
 		end = pc()
 		time = round(end-start, 3)
 		cppy.append(time)
-		print(f'Python called and compiled in C++ took {round(end-start,2)} seconds')				#47 gives negative number, guess it goes over some kind of maximum range for C++;
+		print(f'Python called and compiled in C++ took {round(end-start,2)} seconds')		#47 gives negative number, guess it goes over some kind of maximum range for C++;
 
 
-	plt.scatter(x, cppy)
+	fig = plt.figure()
+	ax = fig.add_subplot()
+	ax.scatter(x, pyy, c = 'red', label='Python')
+	ax.scatter(x, numby, c='blue', label='Numba')
+	ax.scatter(x, cppy, c='green', label = 'C++')
 	plt.xlabel('n')
 	plt.ylabel('time(s)')
-	plt.title('Time for c++')
+	plt.legend(loc='upper left')
+	plt.title('Time for All')
 	plt.show()
-	plt.savefig('Time cpp')
+	plt.savefig('Time py')
 if __name__ == '__main__':
 	main()
