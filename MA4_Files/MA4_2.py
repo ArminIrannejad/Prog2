@@ -40,7 +40,7 @@ def main():
 		end = pc()
 		time = round(end-start, 3)
 		numby.append(time)
-		print(f'Python but with numba took {round(end-start, 2)} seconds')
+		print(f'Python but with numba took {time} seconds')
 	for i in x:
 
 		f = Person(i)
