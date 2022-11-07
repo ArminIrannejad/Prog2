@@ -19,19 +19,19 @@ def fib_numb(n):
 
 
 def main():
-	x = [i for i in range(30, 46)]
+	x = [i for i in range(20, 31)]
 	pyy = []
 	numby = []
 	cppy = []
 
-	for i in x:
+	#for i in x:
 
-		start = pc()
-		fib_py(i)
-		end = pc()
-		time = round(end-start, 3)
-		pyy.append(time)
-		print(f'Normal Python took {round(end-start, 2)} seconds')
+		#start = pc()
+		#fib_py(i)
+		#end = pc()
+		#time = round(end-start, 3)
+		#pyy.append(time)
+		#print(f'Normal Python took {round(end-start, 2)} seconds')
 
 
 	for i in x:
@@ -54,14 +54,14 @@ def main():
 
 	fig = plt.figure()
 	ax = fig.add_subplot()
-	ax.scatter(x, pyy, c = 'red', label='Python')
+	#ax.scatter(x, pyy, c = 'red', label='Python')
 	ax.scatter(x, numby, c='blue', label='Numba')
 	ax.scatter(x, cppy, c='green', label = 'C++')
 	plt.xlabel('n')
 	plt.ylabel('time(s)')
 	plt.legend(loc='upper left')
-	plt.title('Time for All')
+	plt.title('Numba vs C++')
 	plt.show()
-	plt.savefig('Time py')
+	plt.savefig('Time N and C++')
 if __name__ == '__main__':
 	main()
