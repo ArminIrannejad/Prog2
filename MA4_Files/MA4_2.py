@@ -38,7 +38,7 @@ def main():
 		start = pc()
 		fib_numb(i)
 		end = pc()
-		time = round(end-start, 3)
+		time = round(end-start, 4)
 		numby.append(time)
 		print(f'Python but with numba took {time} seconds')
 	for i in x:
